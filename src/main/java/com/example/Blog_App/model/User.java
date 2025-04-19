@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -26,5 +28,8 @@ public class User {
 
     @Column(name = "ph-no")
     private String phNo;
+
+    @OneToMany(mappedBy = "author",fetch = FetchType.EAGER)
+    private List<Blog> blogs;
 
 }
