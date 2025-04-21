@@ -29,7 +29,7 @@ public class User {
     @Column(name = "ph-no")
     private String phNo;
 
-    @OneToMany(mappedBy = "author",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "author",fetch = FetchType.LAZY)
     private List<Blog> blogs;
 
 }
