@@ -11,5 +11,7 @@ import java.util.List;
 @Repository
 public interface BlogRepository extends JpaRepository<Blog,Long> {
     Page<Blog> findAll(Pageable pageable);
-    List<Blog> findByAuthor_UserName(String name);
+//    List<Blog> findByAuthor_UserName(String name);
+    List<Blog> findAllByTitle(String blogTitle);
+    Page<Blog> findAllByAuthor_Email(String email,Pageable pageable);
 }
