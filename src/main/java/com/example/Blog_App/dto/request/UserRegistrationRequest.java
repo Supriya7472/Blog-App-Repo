@@ -10,16 +10,13 @@ import lombok.Setter;
 @Setter
 public class UserRegistrationRequest {
 
-    @NotBlank(message = "First name is required")
-    @Pattern(regexp = "^[A-Za-z ]{2,30}$", message = "First name must contain only letters and spaces, and be 2 to 30 characters long")
-    private String firstName;
+    @NotBlank(message = "User name is required")
+    @Pattern(regexp = "^[A-Za-z ]{2,30}$", message = "User name must contain only letters and spaces, and be 2 to 30 characters long")
+    private String userName;
 
-    @NotBlank(message = "Last name is required")
-    @Pattern(regexp = "^[A-Za-z ]{2,30}$", message = "Last name must contain only letters and spaces, and be 2 to 30 characters long")
-    private String lastName;
 
     @NotBlank(message = "Phone number is required")
-    @Pattern(regexp = "^\\+?[1-9][0-9]{7,14}$", message = "Invalid international phone number")
+    @Pattern(regexp = "^[6-9]\\d{9}$",message = "Invalid phone number")
     private String phno;
 
     @NotBlank(message = "Email is required")
