@@ -11,9 +11,20 @@ Spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
   port: 9090
+
+app:
+  base-url: /api/v1
+  client:
+    origin: ${CLIENT_ORIGIN:http://localhost:5173}
+  security:
+    token-validity:
+      access-validity: 3600
+      refresh-validity: 3600
+    secret: ${SECURITY_SECRET};
+  domain:
+    name: ${DOMAIN_NAME}
+    secure: ${DOMAIN_SECURE:false}
+    same-site: ${DOMAIN_SAME_SITE:Lax}
