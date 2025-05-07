@@ -41,7 +41,7 @@ A complete full stack **Blog Application** built using **Spring Boot (backend)**
 | **JWT Auth** | Access Token & Refresh Token implementation |
 | **Build Tool** | Maven                                      |
 | **Database** | MySQL                                        |
-| **Others**   | Git, GitHub, Postman (for testing), dotenv   |
+| **Others**   | Git, GitHub, Postman (for testing)           |
 
 ---
 
@@ -57,7 +57,7 @@ blog-application/
 ├── frontend/
 │   ├── src/
 │   ├── vite.config.js
-│   └── .env.example (actual env values stored here)
+│   └── .env.example (for production team, values to set)
 ├── README.md
 ```
 
@@ -102,12 +102,6 @@ npm run dev
 
 ---
 
-## 🌐 Live Preview
-
-> You can include a deployed link here if you're hosting the app using Vercel / Netlify (frontend) and Render / Railway / Heroku (backend)
-
----
-
 ## 🔒 Security Notes
 
 - JWT is stored in HttpOnly cookies for secure auth handling.
@@ -119,7 +113,7 @@ npm run dev
 ## 👩‍💻 Developed By
 
 **Supriya** — Java Full Stack Developer  
-GitHub: [your-username](https://github.com/Supriya7472)
+GitHub: [Supriya7472](https://github.com/Supriya7472)
 
 ---
 
